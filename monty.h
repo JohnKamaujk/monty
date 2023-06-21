@@ -38,5 +38,8 @@ typedef struct instruction_s
 } instruction_t;
 
 void verify_arg(int argc, char *argv[], FILE *file);
+void fpush(stack_t **stack, unsigned int line_number);
+void fpall(stack_t **stack_head, __attribute__ ((unused))unsigned int line_number);
+void fpint(stack_t **stack_head, unsigned int line_number);
 
 #endif
