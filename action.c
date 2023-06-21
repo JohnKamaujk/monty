@@ -12,17 +12,12 @@ int switcher(char *content, stack_t **stack, unsigned int line_counter,
 FILE *file)
 {
 	instruction_t command_list[] = {
-		{"push", push},
+		{"push", push}, {"mod", modulator}, {"pchar", print_char},
+		{"pstr", print_str}, {"rotl", rotater}, {"rotr", s_rotator},
+		{"queue", queues}, {"stack", stack_printer},
 		{"pall", stack_printer}, {"pint", pinter}, {"pop", popper},
 		{"swap", swapper}, {"add", add_top_2}, {"nop", nope},
 		{"sub", subtract_top_2}, {"div", divider}, {"mul", multiplier},
-		{"mod", modulator},
-		{"pchar", print_char},
-		{"pstr", print_str},
-		{"rotl", rotater},
-		{"rotr", s_rotator},
-		{"queue", queues},
-		{"stack", stack_printer},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
