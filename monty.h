@@ -37,4 +37,6 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+void verify_arg(int argc, char *argv[], FILE *file);
+
 #endif
