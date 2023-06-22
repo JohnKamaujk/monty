@@ -1,5 +1,5 @@
 #include "monty.h"
-
+pay_data pusher = {NULL, NULL, NULL, 0};
 /**
  * main - monty code interpreter
  * @argc: arguments count
@@ -8,7 +8,6 @@
  */
 int main(int argc, char *argv[])
 {
-	pay_data pusher = {NULL, NULL, NULL, 0};
 	char *content;
 	FILE *file;
 	size_t size = 0;
@@ -36,11 +35,11 @@ int main(int argc, char *argv[])
 		line_counter++;
 		if (read_line > 0)
 		{
-			execute(content, &stack, line_counter, file);
+			action(content, &stack, line_counter, file);
 		}
 		free(content);
 	}
-	s_free(stack);
+	free_sll(stack);
 	fclose(file);
 	return (0);
 }

@@ -20,7 +20,7 @@ void swapper(stack_t **head, unsigned int line_counter)
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_counter);
 		fclose(pusher.file);
 		free(pusher.content);
-		free_stack(*head);
+		free_sll(*head);
 		exit(EXIT_FAILURE);
 	}
 	h = *head;

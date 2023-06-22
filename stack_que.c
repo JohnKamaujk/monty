@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * stack_printer - prints first element
+ * stack_p - prints first element
  * @head: pointer to the stack head
  * @line_counter: line_number
  *
 */
-void stack_printer(stack_t **head, unsigned int line_counter)
+void stack_p(stack_t **head, unsigned int line_counter)
 {
 	(void)head;
 	(void)line_counter;

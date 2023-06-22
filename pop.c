@@ -16,7 +16,7 @@ void popper(stack_t **head, unsigned int line_counter)
 		fprintf(stderr, "L%d: can't pop an empty stack\n", line_counter);
 		fclose(pusher.file);
 		free(pusher.content);
-		s_free(*head);
+		free_sll(*head);
 		exit(EXIT_FAILURE);
 	}
 

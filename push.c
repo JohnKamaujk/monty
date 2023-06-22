@@ -25,7 +25,7 @@ void push(stack_t **head, unsigned int line_counter)
 			fprintf(stderr, "L%d: usage: push integer\n", line_counter);
 			fclose(pusher.file);
 			free(pusher.content);
-			freed_stack(*head);
+			free_sll(*head);
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -34,13 +34,13 @@ void push(stack_t **head, unsigned int line_counter)
 		fprintf(stderr, "L%d: usage: push integer\n", line_counter);
 		fclose(pusher.file);
 		free(pusher.content);
-		free_stack(*head);
+		free_sll(*head);
 		exit(EXIT_FAILURE);
 	}
 
 	n = atoi(pusher.arg);
 	if (pusher.lifi == 0)
-		addnode(head, n);
+		node_creator(head, n);
 	else
-		addqueue(head, n);
+		queue_creator(head, n);
 }

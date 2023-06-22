@@ -56,14 +56,12 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
-ssize_t getstdin(char **lineptr, int file);
-char  *clean_line(char *content);
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 void push(stack_t **head, unsigned int number);
-void stack_printer(stack_t **head, unsigned int number);
+
 void pinter(stack_t **head, unsigned int number);
-int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
-void free_singly_linked_list(stack_t *head);
+int action(char *content, stack_t **head, unsigned int counter, FILE *file);
+void free_sll(stack_t *head);
 void popper(stack_t **head, unsigned int counter);
 void swapper(stack_t **head, unsigned int counter);
 void add_top_2(stack_t **head, unsigned int counter);
@@ -80,4 +78,5 @@ void node_creator(stack_t **head, int n);
 void queue_creator(stack_t **head, int n);
 void queues(stack_t **head, unsigned int counter);
 void stack_printer(stack_t **head, unsigned int counter);
+void stack_p(stack_t **head, unsigned int line_counter);
 #endif

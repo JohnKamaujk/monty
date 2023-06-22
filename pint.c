@@ -12,7 +12,7 @@ void pinter(stack_t **head, unsigned int line_counter)
 		fprintf(stderr, "L%u: can't pint, stack empty\n", line_counter);
 		fclose(pusher.file);
 		free(pusher.content);
-		s_free(*head);
+		free_sll(*head);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*head)->n);

@@ -21,7 +21,7 @@ void divider(stack_t **head, unsigned int line_counter)
 		fprintf(stderr, "L%d: can't div, stack too short\n", line_counter);
 		fclose(pusher.file);
 		free(pusher.content);
-		s_free(*head);
+		free_sll(*head);
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
@@ -30,7 +30,7 @@ void divider(stack_t **head, unsigned int line_counter)
 		fprintf(stderr, "L%d: division by zero\n", line_counter);
 		fclose(pusher.file);
 		free(pusher.content);
-		s_free(*head);
+		free_sll(*head);
 		exit(EXIT_FAILURE);
 	}
 	temp_head = h->next->n / h->n;

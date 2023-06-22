@@ -1,9 +1,9 @@
 #include "monty.h"
 /**
-* free_singly_linked_list - frees a doubly linked list
+* free_sll - frees a doubly linked list
 * @head: head of the stack
 */
-void free_singly_linked_list(stack_t *head)
+void free_sll(stack_t *head)
 {
 	stack_t *temp_head;
 

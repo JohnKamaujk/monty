@@ -18,7 +18,7 @@ void subtract_top_2(stack_t **head, unsigned int line_counter)
 		fprintf(stderr, "L%d: can't sub, stack too short\n", line_counter);
 		fclose(pusher.file);
 		free(pusher.content);
-		s_free(*head);
+		free_sll(*head);
 		exit(EXIT_FAILURE);
 	}
 	temp_head = *head;
